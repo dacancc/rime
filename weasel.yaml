@@ -1,0 +1,83 @@
+config_version: "2024-3-3"
+
+app_options:
+  cmd.exe:
+    ascii_mode: true
+  conhost.exe:
+    ascii_mode: true
+
+style:
+  antialias_mode: default # 抗锯齿模式
+  ascii_tip_follow_cursor: false # ASCII提示跟随光标
+  display_tray_icon: false # 显示系统托盘图标
+
+  fullscreen: false # 全屏候选词窗口
+  inline_preedit: true # 在光标位置显示预编辑文本
+  preedit_type: composition # 预编辑文本类型
+  mouse_hover_ms: 0 # 鼠标悬停选词响应时间，若设置过低，鼠标在候选框上时会影响选词，值为 0 或将这行注释禁用此功能
+  paging_on_scroll: false # 鼠标滚轮翻页候选词
+
+  horizontal: true # 水平排列候选词
+  font_face: Segoe UI Emoji:30:39, Noto Color Emoji, yolan, LXGW WenKai, Microsoft YaHei # 主要字体
+  label_font_face: yolan # 标签字体
+  comment_font_face: yolan # 注释字体
+  font_point: 12 # 主要字体大小
+  label_font_point: 12 # 标签字体大小
+  comment_font_point: 12 # 注释字体大小
+
+  vertical_auto_reverse: false # 垂直排列时自动反转顺序
+  vertical_text: false # 垂直文本显示
+  vertical_text_left_to_right: false # 垂直文本从左到右显示
+  vertical_text_with_wrap: false # 垂直文本自动换行
+
+  __include: "weasel:/win11_preset"  # 风格预设
+
+  color_scheme: win11黑 # 颜色方案
+
+preset_color_schemes:
+  win11白:
+    name: "win11白"
+    back_color: 0xF3F3F3 # 背景颜色 颜色均取色自 Windows 10 默认
+    border_color: 0xDBDCDC # 边框颜色
+    candidate_text_color: 0x000000 # 候选文字颜色
+    hilited_candidate_back_color: 0xFFD8A6 # 高亮颜色
+    hilited_label_color: 0x6F6F6F # 高亮序号颜色
+    hilited_mark_color: 0x00000000 # 此项不生效
+    label_color: 0x6F6F6F # 候选数字颜色
+    shadow_color: 0x20000000 # 阴影颜色，新版小狼毫 CI 更改了绘制，若无法看到阴影，请更改为 000000，观察是否能正常绘制阴影
+    text_color: 0x000000 # 拼音文字颜色
+
+  win11黑:
+    name: "win11黑"
+    back_color: 0x1C1C1C # 背景颜色 颜色均取色自 Windows 11 默认
+    border_color: 0xE7E7E7 # 边框颜色
+    candidate_text_color: 0xFFFFFF # 候选文字颜色
+    hilited_candidate_back_color: 0xFFD8A6 # 高亮颜色
+    hilited_label_color: 0x6F6F6F # 高亮序号颜色
+    hilited_mark_color: 0x00000000 # 此项不生效
+    label_color: 0x6F6F6F # 候选数字颜色
+    shadow_color: 0x20000000 # 阴影颜色，新版小狼毫 CI 更改了绘制，若无法看到阴影，请更改为 000000，观察是否能正常绘制阴影
+    text_color: 0x000000 # 拼音文字颜色
+
+win11_preset:
+  label_format: "\u2005\u2006%s" # 候选词标签格式
+  layout:
+    align_type: center # 布局对齐方式
+    max_width: 0 # 最大宽度限制
+    min_width: 160 # 最小宽度限制
+    min_height: 0 # 最小高度限制
+    max_height: 0 # 最大高度限制
+    border_width: 1 # 窗口边框宽度
+    margin_x: 12 # 窗口左右边距
+    margin_y: 8 # 窗口上下边距
+    spacing: 14 # 候选词间距
+    hilite_spacing: 6 # 高亮显示间距
+    shadow_offset_x: 6 # 阴影 X 轴偏移
+    candidate_spacing: 10 # 候选词内部间距
+    corner_radius: 6 # 候选圆角半径
+    hilite_padding: 3 # 高亮高度
+    hilite_padding_x: 0 # 高亮 X 横向方向边距
+    hilite_padding_y: 0 # 高亮 Y 纵向方向边距
+    round_corner: 5 # 高亮圆角
+    shadow_offset_y: 6 # 阴影 Y 轴偏移
+    shadow_radius: 13 # 阴影半径

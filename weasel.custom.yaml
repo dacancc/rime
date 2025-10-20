@@ -1,0 +1,21 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.15.0.0
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Sun Mar  3 15:57:24 2024"
+  rime_version: 1.8.5
+patch:
+  # 以下为默认皮肤配置
+  "style/color_scheme": "win11白"
+  "style/horizontal": true
+  # 以下为特定程序中默认使用英文输入法
+  app_options/windowsterminal.exe: # 程序名字全用小寫字母
+    ascii_mode: true
+  app_options/powershell.exe:
+    ascii_mode: true
+  app_options/code.exe:
+    ascii_mode: true
+  app_options/putty.exe:
+    ascii_mode: true
+  app_options/listary.exe:
+    ascii_mode: true
